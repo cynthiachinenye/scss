@@ -5,8 +5,9 @@
     .bg#{$key}{
         background-color:$val;
     }
-    
-    // light opacity
+    @if($val != black and $val != white){
+         
+        // light opacity
     @for $i from 1 through 9{
         .text-#{$key}-light-#{$i}{
             color:mix(#fff, $val, $i *10)
@@ -26,4 +27,8 @@
             background-color:mix(black,$val,$i *10)
         }
     }
+    }
+    
 }
+
+
