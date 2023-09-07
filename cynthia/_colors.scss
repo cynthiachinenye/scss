@@ -2,6 +2,12 @@
     .text-#{$key}{
         color:$val;
     }
+    .text-hover-#{$key}{
+        &:hover{
+            color:$val
+        }
+        
+    }
     .bg#{$key}{
         background-color:$val;
     }
@@ -10,8 +16,12 @@
         // light opacity
     @for $i from 1 through 9{
         .text-#{$key}-light-#{$i}{
-            color:mix(#fff, $val, $i *10)
+            color:mix(#fff, $val, $i *10);
         }
+        .text-hover-#{$key}-light-#{$i}{
+           &:hover { color:mix(white, $val, $i);
+        }
+    }
         .bg-#{$key}-light-#{$i}{
             background-color: mix(#fff, $val, $i * 10);
 
@@ -23,6 +33,10 @@
         .text-#{$key}-dark-#{$i}{
             color:mix(black,$val,$i * 10)
         }
+        .text-hover-#{$key}-light-#{$i}{
+            &:hover { color: mix(black, $val, $i * 10);
+        }
+    }
         .bg-#{$key}-dark-#{$i}{
             background-color:mix(black,$val,$i *10)
         }
