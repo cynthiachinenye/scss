@@ -2,9 +2,11 @@
 //variables and function
 @import 'function';
 @import 'variables';
-@import 'base';
-//base & layout
 
+
+//base & layout
+@import 'base';
+@import 'breakpoints';
 
 //colors
 @import 'colors';

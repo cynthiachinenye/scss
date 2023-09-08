@@ -1,3 +1,5 @@
+
+
 @use 'sass:math';
 
 $utilities:(
@@ -127,7 +129,7 @@ $utilities:(
 
     ),
     'opacity': (
-        'prefix':'0',
+        'prefix':'o',
         'values':(
             '10':0.1,
             '20':0.2,
