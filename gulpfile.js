@@ -10,7 +10,7 @@ function buildStyles(){
 }
 
 function watchTask(){
-    watch(['cynthia/**/*.scss'],buildStyles)
+    watch(['cynthia/**/*.scss','*.html'],buildStyles)
 }
 
 exports.default = series(buildStyles,watchTask)
