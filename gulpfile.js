@@ -1,11 +1,11 @@
 const {src, dest,watch,series}= require('gulp') 
-const { default: gulpPurgeCSS } = require('gulp-purgecss')
+const  purgecss  = require('gulp-purgecss')
 const sass = require('gulp-sass')(require('sass'))
 
 function buildStyles(){
     return src('cynthia/**/*.scss')
     .pipe(sass())
-    .pipe(gulpPurgeCSS({ contents: ['*.html'] }))
+    .pipe(purgecss({ content: ['*.html'] }))
     .pipe(dest('css'))
 }
 
